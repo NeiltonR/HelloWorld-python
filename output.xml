@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.8.5 on linux)" generated="20201015 11:35:20.810" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.8.5 on linux)" generated="20201015 12:48:05.560" rpa="false">
 <suite id="s1" name="Test" source="/home/neilton/Documents/workSpace/lab/robot_framework/qaninja/robot/test.robot">
 <test id="s1-t1" name="Deve retornar mensagem de boas vindas">
 <kw name="Welcome" library="app">
 <arguments>
 <arg>Neilton</arg>
 </arguments>
-<status status="PASS" starttime="20201015 11:35:20.841" endtime="20201015 11:35:20.842"></status>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20201015 12:48:05.589" level="INFO">${result} = Olá Neilton, bem vindo ao curso básico de Robot Framework</msg>
+<status status="PASS" starttime="20201015 12:48:05.588" endtime="20201015 12:48:05.589"></status>
 </kw>
-<status status="PASS" starttime="20201015 11:35:20.840" endtime="20201015 11:35:20.842" critical="yes"></status>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>Olá Neilton, bem vindo ao curso básico de Robot Framework</arg>
+</arguments>
+<status status="PASS" starttime="20201015 12:48:05.589" endtime="20201015 12:48:05.590"></status>
+</kw>
+<status status="PASS" starttime="20201015 12:48:05.588" endtime="20201015 12:48:05.590" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20201015 11:35:20.811" endtime="20201015 11:35:20.842"></status>
+<status status="PASS" starttime="20201015 12:48:05.561" endtime="20201015 12:48:05.590"></status>
 </suite>
 <statistics>
 <total>
